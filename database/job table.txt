@@ -1,0 +1,23 @@
+
+
+CREATE TABLE `job`.`comp_login` (
+  `username` VARCHAR(50) NOT NULL,
+  `email_id` TEXT(50) NOT NULL,
+  `password` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`email_id`))
+   COMMENT = 'company login';
+
+
+
+CREATE TABLE `job`.`company` (
+  `company_id` INT NOT NULL,
+  `company_name` VARCHAR(45) NOT NULL,
+  `email_id` VARCHAR(45) NOT NULL,
+  `location` VARCHAR(100) NOT NULL,
+  `jobs` VARCHAR(45) NOT NULL,
+  `salary` INT NOT NULL,
+  `experience` VARCHAR(45) NOT NULL,
+  `date` VARCHAR(20) NOT NULL,
+  PRIMARY KEY (`company_id`),
+  UNIQUE INDEX `email_id_UNIQUE` (`email_id` ASC) VISIBLE);
+

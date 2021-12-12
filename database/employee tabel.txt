@@ -1,0 +1,51 @@
+CREATE TABLE `job`.`signup` (
+  `emp_id` INT NOT NULL,
+  `emp_name` VARCHAR(50) NOT NULL,
+  `email_id` VARCHAR(45) NOT NULL,
+  `phone_num` INT NOT NULL,
+  `DOB` VARCHAR(30) NOT NULL,
+  `gander` VARCHAR(10) NOT NULL,
+  `state` TEXT(50) NOT NULL,
+  `country` TEXT(100) NOT NULL,
+  `address` VARCHAR(100) NOT NULL,
+  `password` VARCHAR(30) NOT NULL,
+  `con_password` VARCHAR(30) NOT NULL,
+  PRIMARY KEY (`emp_id`),
+  UNIQUE INDEX `email_id_UNIQUE` (`email_id` ASC) VISIBLE,
+  UNIQUE INDEX `phone_num_UNIQUE` (`phone_num` ASC) VISIBLE);
+
+
+CREATE TABLE `job`.`emp_info` (
+  `emp_id` INT NOT NULL,
+  `emp_name` VARCHAR(45) NOT NULL,
+  `email_id` VARCHAR(45) NOT NULL,
+  `ug_course` VARCHAR(45) NOT NULL,
+  `ug_college` VARCHAR(45) NOT NULL,
+  `ug_per` VARCHAR(45) NOT NULL,
+  `ug_year` VARCHAR(45) NOT NULL,
+  `course_12` VARCHAR(45) NOT NULL,
+  `college_12` VARCHAR(45) NOT NULL,
+  `per_12` VARCHAR(45) NOT NULL,
+  `year_12` VARCHAR(45) NOT NULL,
+  `course_10` VARCHAR(45) NOT NULL,
+  `college_10` VARCHAR(45) NOT NULL,
+  `per_10` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`emp_id`),
+  UNIQUE INDEX `email_id_UNIQUE` (`email_id` ASC) VISIBLE);
+
+
+CREATE TABLE `job`.`job_apply` ( `job_id` INT NOT NULL,`comp_name` VARCHAR(45) NOT NULL, `job` VARCHAR(45) NOT NULL, `location` VARCHAR(45) NOT NULL, `emp_id` VARCHAR(45) NOT NULL, `emp_name` VARCHAR(45) NOT NULL, `emp_email` VARCHAR(45) NOT NULL);
+
+// short list table
+
+CREATE TABLE `job`.`short_list` (
+  `job_id` INT UNSIGNED NOT NULL,
+  `comp_name` VARCHAR(45) NULL,
+  `job` VARCHAR(45) NOT NULL,
+  `location` VARCHAR(45) NOT NULL,
+  `emp_id` VARCHAR(45) NOT NULL,
+  `emp_name` VARCHAR(45) NOT NULL,
+  `emp_email` VARCHAR(45) NOT NULL);
+
+
+
